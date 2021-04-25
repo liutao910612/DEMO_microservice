@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.demo.microservice.account.mapper.UserMapper">
+
+    <resultMap id="baseResult" type="com.kevin.demo.microservice.account.entity.UserEntity">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="first_name" jdbcType="VARCHAR" property="firstName"/>
+        <result column="last_name" jdbcType="VARCHAR" property="lastName"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+    </resultMap>
+
+    <select id="findUserByPhone" resultMap="baseResult" parameterType="java.lang.String">
+        select
+            ku.id,
+            ku.first_name,
+            ku.last_name,
+            ku.age,
+            ku.phone,
+            ku.email
+        from kevin_user ku
+        where ku.phone = #{phone}
+    </select>
+
+</mapper>
