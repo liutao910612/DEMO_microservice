@@ -3,14 +3,11 @@ package com.kevin.demo.microservice.account.controller;
 import com.kevin.demo.microservice.account.bo.UserBO;
 import com.kevin.demo.microservice.account.service.UserService;
 import com.kevin.demo.microservice.account.vo.UserVO;
-import com.kevin.demo.microservice.common.component.EmailComponent;
 import com.kevin.util.web.ResponseBuilder;
 import com.kevin.util.web.RestfulDataResponse;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.PostConstruct;
 
 /**
  * @Author:Kevin
