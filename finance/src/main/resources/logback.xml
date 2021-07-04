@@ -44,9 +44,6 @@
     <logger name="org.mybatis" level="WARN"/>
     <logger name="druid" level="WARN"/>
     <logger name="com.kevin" level="DEBUG"/>
-    <logger name="com.kevin.account.mapper">
-        <appender-ref ref="SQL"/>
-    </logger>
     <root level="DEBUG">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
